@@ -1,0 +1,270 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Adjust to column layout for header, main, and footer */
+  justify-content: space-between; /* Space out header, main, and footer */
+  align-items: center;
+  height: 100vh;
+  background-color: #ECF0F1; /* Light Gray Background */
+  color: #2C3E50; /* Dark Blue Text */
+  font-family: 'Exo 2', Arial, sans-serif; /* Default font for all text */
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+
+/* Header Section Styling */
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative; /* Allows positioning of child elements */
+}
+
+/* GitHub Link Styling */
+.github-link {
+  position: fixed; /* Fixed position ensures it stays in the same spot even when scrolling */
+  top: 15px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+.github-link a {
+  font-family: 'Exo 2', Arial, sans-serif; /* Use Exo 2 font */
+  font-size: 1.5rem; /* Smaller font size for the link */
+  color: #95A5A6; /* Grey color for the link */
+  text-decoration: none; /* Remove underline */
+}
+
+.github-link a:hover {
+  color: #7a3ff3; /* Accent color on hover */
+  text-decoration: underline; /* Add underline on hover for interactivity */
+}
+
+.title {
+  font-family: 'Orbitron', Arial, sans-serif; /* Orbitron for the title */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7a3ff3; /* Updated Accent Color */
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #95A5A6; /* Slate Gray Text */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Container Styling */
+.container {
+  width: 95%; /* Slightly smaller than full width */
+  max-width: none; /* Remove width limit */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding around the slider box */
+}
+
+/* Slider Box Styling */
+.slider-box {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(8, 1fr); /* 8 columns (to fit 4 sliders per row) */
+  grid-template-rows: repeat(10, auto); /* 10 rows (to fit 80 sliders total) */
+  gap: 1px; /* Thin black lines between sliders */
+  background-color: #95A5A6; /* Slate Gray Background for the box */
+  padding: 40px; /* Larger padding for a bigger box */
+  border-radius: 20px; /* Curved edges */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  max-height: 90vh; /* Limit height to prevent excessive scrolling */
+}
+
+/* Individual Slider Item Styling */
+.slider-item {
+  text-align: center; /* Center align labels and values */
+  background-color: #2C3E50; /* Dark Blue Background for each slider */
+  padding: 10px; /* Padding inside each slider item */
+  border-radius: 5px; /* Slightly curved edges for individual sliders */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle inner shadow for depth */
+}
+
+/* Label Styling */
+.slider-item label {
+  display: block;
+  margin-bottom: 5px; /* Space between label and slider */
+  font-size: 10px; /* Smaller font size for compactness */
+  color: #ECF0F1; /* Light Gray Text for visibility */
+  text-transform: uppercase; /* Optional: Uppercase for emphasis */
+  white-space: nowrap; /* Prevent label text from wrapping */
+}
+
+/* Slider Container Styling */
+.slider-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between slider and values */
+}
+
+/* Slider Input Styling */
+.slider-container input[type="range"] {
+  flex: 1; /* Allow slider to grow and fill space */
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  height: 6px; /* Thinner track */
+  background: #7a3ff3; /* Updated Accent Color for Track */
+  outline: none; /* Remove default focus outline */
+  border-radius: 5px; /* Rounded corners for the track */
+}
+
+/* Slider Thumb Styling (Webkit Browsers) */
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default thumb styling */
+  appearance: none;
+  width: 20px; /* Larger thumb */
+  height: 20px; /* Larger thumb */
+  background: #7a3ff3; /* Updated Accent Color for Thumb */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  border-radius: 50%; /* Circular thumb */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Slider Thumb Styling (Firefox) */
+.slider-container input[type="range"]::-moz-range-thumb {
+  width: 20px; /* Larger thumb */
+  height: 20px; /* Larger thumb */
+  background: #7a3ff3; /* Updated Accent Color for Thumb */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  border-radius: 50%; /* Circular thumb */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Slider Track Styling (Firefox) */
+.slider-container input[type="range"]::-moz-range-track {
+  background: #7a3ff3; /* Updated Accent Color for Track */
+  border-radius: 5px; /* Rounded corners for the track */
+  height: 6px; /* Thinner track */
+}
+
+/* Display Percentage Value */
+.slider-container .value {
+  font-size: 10px; /* Smaller font size for compactness */
+  font-weight: bold; /* Bold text */
+  color: #ECF0F1; /* Light Gray Text for visibility */
+}
+
+/* Footer Section Styling */
+.footer-section {
+  text-align: center;
+  margin-top: 10px; /* Reduced margin for a flatter look */
+  padding: 5px 15px; /* Further reduced padding for compactness */
+  background-color: #2C3E50; /* Dark Blue Background */
+  color: #ECF0F1; /* Light Gray Text */
+  border-radius: 3px; /* Minimal curve for edges */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  max-width: 800px;
+  width: 100%;
+}
+
+.disclaimer-title {
+  font-size: 1rem; /* Even smaller font size for the title */
+  font-weight: bold;
+  margin-bottom: 3px; /* Reduced spacing below the title */
+}
+
+.disclaimer-text {
+  font-size: 0.8rem; /* Smaller font size for the disclaimer text */
+  line-height: 1.3; /* Reduced line height for compactness */
+  margin-bottom: 5px; /* Reduced spacing below the text */
+}
+
+/* Footer Credit Styling */
+.footer-credit {
+  font-size: 0.7rem; /* Smaller font size for the credit */
+  color: #ECF0F1; /* Light Gray Text */
+  margin-top: 3px; /* Reduced spacing above the credit */
+  text-align: center;
+}
+
+.footer-credit a {
+  color: #7a3ff3; /* Accent Color for Links */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the link stand out */
+}
+
+.footer-credit a:hover {
+  text-decoration: underline; /* Add underline on hover for interactivity */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .slider-box {
+    grid-template-columns: repeat(6, 1fr); /* Adjust columns for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-box {
+    grid-template-columns: repeat(4, 1fr); /* Further reduce columns for mobile devices */
+  }
+
+  .slider-item label {
+    font-size: 8px; /* Even smaller font size for mobile */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .disclaimer-title {
+    font-size: 1rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .footer-credit {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-box {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for very small screens */
+  }
+
+  .slider-item label {
+    font-size: 7px; /* Smallest font size for labels */
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .disclaimer-title {
+    font-size: 0.9rem;
+  }
+
+  .disclaimer-text {
+    font-size: 0.7rem;
+    line-height: 1.1;
+  }
+
+  .footer-credit {
+    font-size: 0.5rem;
+  }
+}

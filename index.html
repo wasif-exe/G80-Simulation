@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G80 Simulation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="github-link">
+    <a href="https://github.com/wasif-exe" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+  <header class="header-section">
+    <h1 class="title">The Cosmic Balance</h1>
+    <p class="tagline">
+      "A Simulation of Universal Forces"
+    </p>
+  </header>
+
+  <!-- Main Content (Sliders) -->
+  <main>
+    <div class="slider-box">
+      <!-- First Slider: Political Polarization -->
+      <div class="slider-item">
+        <label for="political-polarization">Political Polarization</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="political-polarization" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="political-stability">Political Stability</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="political-stability" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="happiness">Happiness</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="happiness" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="postcolonialism">Postcolonialism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="postcolonialism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="health">Health</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="health" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="protected-natural-areas">Protected Natural Areas</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="protected-natural-areas" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="income-equality">Income Equality</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="income-equality" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="public-services">Public Services</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="public-services" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Economic Systems -->
+      <div class="slider-item">
+        <label for="individualism">Individualism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="individualism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="public-transportation">Public Transportation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="public-transportation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="innovation">Innovation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="innovation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="racism">Racism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="racism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="intensive-agriculture">Intensive Agriculture</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="intensive-agriculture" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="rare-earth-extraction">Rare Earth Extraction</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="rare-earth-extraction" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="LGBTQIA+-rights">LGBTQIA+ Rights</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="LGBTQIA+-rights" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="recycling">Recycling</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="recycling" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Media and Global Issues -->
+      <div class="slider-item">
+        <label for="life-expectancy">Life Expectancy</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="life-expectancy" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="renewable-energy">Renewable Energy</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="renewable-energy" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="mass-surveillance">Mass Surveillance</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="mass-surveillance" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="retirement-age">Retirement Age</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="retirement-age" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="media-freedom">Media Freedom</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="media-freedom" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="sea-level">Sea Level</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="sea-level" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="migration">Migration</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="migration" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="security">Security</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="security" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Technology and Innovation -->
+      <div class="slider-item">
+        <label for="social-media">Social Media</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="social-media" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="military-spending">Military Spending</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="military-spending" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="minimum-wage">Minimum Wage</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="minimum-wage" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="space-exploration">Space Exploration</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="space-exploration" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="natural-disasters">Natural Disasters</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="natural-disasters" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="taxes">Taxes</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="taxes" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="nuclear-energy">Nuclear Energy</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="nuclear-energy" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="tourism">Tourism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="tourism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="open-source">Open Source</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="open-source" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      
+      <!-- Environment and Resources -->
+      <div class="slider-item">
+        <label for="vaccination">Vaccination</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="vaccination" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="paid-vacation">Paid Vacation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="paid-vacation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="war">War</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="war" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="wealth-inequality">Wealth Inequality</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="wealth-inequality" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="parental-leave">Parental Leave</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="parental-leave" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="pandemic-threat">Pandemic Threat</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="pandemic-threat" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="commons">Commons</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="commons" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="3D-printing">3D Printing</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="3D-printing" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Social and Cultural Dynamics -->
+      <div class="slider-item">
+        <label for="corruption">Corruption</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="corruption" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="5G">5G</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="5G" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="cryptocurrency">Cryptocurrency</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="cryptocurrency" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="access-to-education">Access to Education</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="access-to-education" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="culture-funding">Culture Funding</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="culture-funding" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="access-to-housing">Access to Housing</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="access-to-housing" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="democracy">Democracy</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="democracy" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="access-to-justice">Access to Justice</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="access-to-justice" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Global Challenges -->
+      <div class="slider-item">
+        <label for="demography">Demography</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="demography" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="air-quality">Air Quality</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="air-quality" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="economic-regulation">Economic Regulation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="economic-regulation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="animal-welfare">Animal Welfare</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="animal-welfare" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="employment-rate">Employment Rate</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="employment-rate" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="art">Art</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="art" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="feminicides">Feminicides</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="feminicides" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="artificial-intelligence">Artificial Intelligence</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="artificial-intelligence" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+
+      <!-- Final Variables -->
+      <div class="slider-item">
+        <label for="financial-speculation">Financial Speculation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="financial-speculation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="atheism">Atheism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="atheism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="food-sovereignty">Food Sovereignty</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="food-sovereignty" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="automation">Automation</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="automation" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="fossil-fuel">Fossil Fuel</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="fossil-fuel" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="biodiversity">Biodiversity</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="biodiversity" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="freedom">Freedom</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="freedom" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="biotechnology">Biotechnology</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="biotechnology" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="GDP">GDP</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="GDP" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="built-up-area">Built-Up Area</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="built-up-area" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="burnout">Burnout</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="burnout" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="gender-equality">Gender Equality</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="gender-equality" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="geoengineering">Geoengineering</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="geoengineering" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="capitalism">Capitalism</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="capitalism" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="glacier-conservancy">Glacier Conservancy</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="glacier-conservancy" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="carbon-emissions">Carbon Emissions</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="carbon-emissions" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="global-trade">Global Trade</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="global-trade" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="clean-water">Clean Water</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="clean-water" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="global-warming">Global Warming</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="global-warming" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="cloud-computing">Cloud Computing</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="cloud-computing" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="GMO">GMO</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="GMO" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="comfort">Comfort</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="comfort" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+      <div class="slider-item">
+        <label for="gravitational-constant">Gravitational Constant</label>
+        <div class="slider-container">
+          <span class="value">0%</span>
+          <input type="range" id="gravitational-constant" min="0" max="100" value="50" class="slider">
+          <span class="value">100%</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Disclaimer Section -->
+  <footer class="footer-section">
+    <h2 class="disclaimer-title">Disclaimer</h2>
+    <p class="disclaimer-text">
+      This simulation explores interconnected global, societal, and environmental factors. It is not meant to predict outcomes but to provide a thought-provoking framework for understanding the relationships shaping our world.
+    </p>
+    <p class="footer-credit">
+      Inspired by the original artwork and concept created by 
+      <a href="https://fragment.in/artworks/g80/" target="_blank" rel="noopener noreferrer">Fragment</a>. 
+      Visit their website to learn more about the G80 project.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
