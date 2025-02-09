@@ -32,8 +32,13 @@ The G80 Simulation is an interactive web-based tool designed to explore the inte
 - Google Fonts: Custom fonts (Orbitron for titles, Exo 2 for body text).
 
 ---
+## Live Demo
 
+You can view and interact with the live demo of the **G80 Simulation** project here:  
+[https://wasif-exe.io/G80-Simulation/](https://singular-figolla-57b700.netlify.app/)
 ## How to Run Locally
+
+---
 
 1. Clone the repository:
    git clone https://github.com/your-username/G80-Simulation.git
