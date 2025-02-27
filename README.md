@@ -84,10 +84,6 @@ Credits
 
 This project was inspired by the original artwork and concept created by Fragment[https://fragment.in/artworks/g80/]. Their work provided the foundational ideas for this simulation.
 
-Special thanks to:
-- Google Fonts for providing the Orbitron and Exo 2 fonts.
-- The open-source community for tools and resources that made this project possible.
-
 ---
 
 License
