@@ -2,17 +2,6 @@
 
 The G80 Simulation is an interactive web-based tool designed to explore the interconnected relationships between global, societal, and environmental factors. It provides a thought-provoking framework for understanding how changes in one area can ripple through the fabric of existence.
 
-## Table of Contents
-
-- Features
-- Technologies Used
-- How to Run Locally
-- Project Structure
-- Knowledge Base
-- Credits
-- License
-
----
 
 ## Features
 
@@ -52,17 +41,6 @@ You can view and interact with the live demo of the **G80 Simulation** project h
 
 ---
 
-## Project Structure
-
-G80-Simulation/
-├── index.html       # Main HTML file
-├── styles.css       # CSS file for styling
-├── script.js        # JavaScript file for interactivity
-├── README.md        # Project description file
-├── LICENSE          # MIT License file
-└── assets/          # Optional folder for images, fonts, etc.
-
----
 
 ## Knowledge Base
 
