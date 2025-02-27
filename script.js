@@ -329,65 +329,84 @@ const relationships = {
 
 
 
-  // Function to update related sliders
-  function updateRelatedSliders(changedSliderId, newValue) {
-    const relationship = relationships[changedSliderId];
-    if (!relationship) return;
-  
-    // Calculate percentage change
-    const percentageChange = (newValue - 50) / 50; // Normalize around 50%
-  
-    // Adjust related sliders
-    relationship.increases.forEach(id => {
-      const slider = document.getElementById(id);
-      if (slider) {
-        const currentValue = parseInt(slider.value);
-        const updatedValue = Math.min(100, Math.max(0, currentValue + percentageChange * 10)); // Limit to 0-100%
-        slider.value = updatedValue;
-        updateSliderValueDisplay(slider); // Update displayed percentage
-      }
-    });
-  
-    relationship.decreases.forEach(id => {
-      const slider = document.getElementById(id);
-      if (slider) {
-        const currentValue = parseInt(slider.value);
-        const updatedValue = Math.min(100, Math.max(0, currentValue - percentageChange * 10)); // Limit to 0-100%
-        slider.value = updatedValue;
-        updateSliderValueDisplay(slider); // Update displayed percentage
-      }
-    });
-  }
-  
-  // Function to update displayed percentage value
-  function updateSliderValueDisplay(slider) {
-    const valueSpan = slider.nextElementSibling; // Get the span element
-    if (valueSpan && valueSpan.classList.contains('value')) {
-      valueSpan.textContent = `${slider.value}%`;
-    }
-  }
-  
-  // Function to initialize sliders with random values
-  function initializeSliders() {
-    document.querySelectorAll('.slider-item input[type="range"]').forEach(slider => {
-      // Generate a random value between 0% and 100%
-      const randomValue = Math.floor(Math.random() * 101); // Random integer between 0 and 100
-      slider.value = randomValue;
-  
-      // Update the displayed percentage value
-      updateSliderValueDisplay(slider);
-  
-      // Add event listener for user interaction
-      slider.addEventListener('input', (event) => {
-        const changedSliderId = event.target.id;
-        const newValue = parseInt(event.target.value);
-        updateRelatedSliders(changedSliderId, newValue);
-        updateSliderValueDisplay(event.target); // Update displayed percentage
+  // Function to update related sliders with a ripple effect
+function updateRelatedSliders(changedSliderId, newValue) {
+  let queue = [{ id: changedSliderId, value: newValue }];
+  let updatedSliders = new Set(); // Track already updated sliders
+
+  while (queue.length > 0) {
+      let { id, value } = queue.shift(); // Get the next slider to process
+      if (updatedSliders.has(id)) continue; // Skip if already updated
+      updatedSliders.add(id);
+
+      const relationship = relationships[id];
+      if (!relationship) continue;
+
+      // Calculate percentage change
+      const percentageChange = (value - 50) / 50; // Normalize around 50%
+
+      // Process related sliders
+      [...relationship.increases, ...relationship.decreases].forEach(relatedId => {
+          const slider = document.getElementById(relatedId);
+          if (slider && !updatedSliders.has(relatedId)) {
+              const currentValue = parseInt(slider.value);
+              const adjustment = relationship.increases.includes(relatedId) ? 1 : -1;
+              let updatedValue = Math.min(100, Math.max(0, currentValue + percentageChange * 20 * adjustment)); // Stronger ripple effect
+
+              animateSlider(slider, updatedValue); // Smooth transition
+
+              // Add to queue for further propagation
+              queue.push({ id: relatedId, value: updatedValue });
+          }
       });
-    });
   }
-  
-  // Initialize sliders on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    initializeSliders();
+}
+
+// Function to animate slider movement smoothly
+function animateSlider(slider, targetValue) {
+  let startValue = parseInt(slider.value);
+  let startTime = null;
+
+  function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      let progress = (timestamp - startTime) / 300; // Adjust speed (higher = slower)
+
+      let newValue = Math.round(startValue + (targetValue - startValue) * Math.min(progress, 1));
+      slider.value = newValue;
+      updateSliderValueDisplay(slider);
+
+      if (progress < 1) {
+          requestAnimationFrame(step);
+      }
+  }
+
+  requestAnimationFrame(step);
+}
+
+// Function to update displayed percentage value
+function updateSliderValueDisplay(slider) {
+  const valueSpan = slider.nextElementSibling;
+  if (valueSpan && valueSpan.classList.contains('value')) {
+      valueSpan.textContent = `${slider.value}%`;
+  }
+}
+
+// Function to initialize sliders with random values
+function initializeSliders() {
+  document.querySelectorAll('.slider-item input[type="range"]').forEach(slider => {
+      const randomValue = Math.floor(Math.random() * 101);
+      slider.value = randomValue;
+      updateSliderValueDisplay(slider);
+
+      slider.addEventListener('input', (event) => {
+          const changedSliderId = event.target.id;
+          const newValue = parseInt(event.target.value);
+          updateRelatedSliders(changedSliderId, newValue);
+      });
   });
+}
+
+// Initialize sliders on page load
+document.addEventListener('DOMContentLoaded', () => {
+  initializeSliders();
+});
