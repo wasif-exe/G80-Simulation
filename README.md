@@ -1,8 +1,14 @@
 # G80 Simulation
 
 The G80 Simulation is an interactive web-based tool designed to explore the interconnected relationships between global, societal, and environmental factors. It provides a thought-provoking framework for understanding how changes in one area can ripple through the fabric of existence.
+---
+## Live Demo
 
+You can view and interact with the live demo of the **G80 Simulation** project here:  
+[https://wasif-exe.io/G80-Simulation/](https://singular-figolla-57b700.netlify.app/)
+## How to Run Locally
 
+---
 ## Features
 
 - 80 Sliders: Each slider represents a variable (e.g., Political Polarization, GDP, Biodiversity) that influences other variables.
@@ -19,13 +25,6 @@ The G80 Simulation is an interactive web-based tool designed to explore the inte
 - CSS: Styling and layout.
 - JavaScript: Interactive slider functionality.
 - Google Fonts: Custom fonts (Orbitron for titles, Exo 2 for body text).
-
----
-## Live Demo
-
-You can view and interact with the live demo of the **G80 Simulation** project here:  
-[https://wasif-exe.io/G80-Simulation/](https://singular-figolla-57b700.netlify.app/)
-## How to Run Locally
 
 ---
 
