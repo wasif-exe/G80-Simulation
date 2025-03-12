@@ -5,7 +5,7 @@ The G80 Simulation is an interactive web-based tool designed to explore the inte
 ## Live Demo
 
 You can view and interact with the live demo of the **G80 Simulation** project here:  
-[https://wasif-exe.io/G80-Simulation/](https://singular-figolla-57b700.netlify.app/)
+[https://wasif-exe.io/G80-Simulation/](https://cosmicbalance.netlify.app/)
 ## How to Run Locally
 
 ---
