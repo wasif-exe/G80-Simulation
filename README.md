@@ -29,7 +29,7 @@ You can view and interact with the live demo of the **G80 Simulation** project h
 ---
 
 1. Clone the repository:
-   git clone https://github.com/your-username/G80-Simulation.git
+   git clone https://github.com/wasif-exe/G80-Simulation.git
 2. Navigate to the project folder:
    cd G80-Simulation
 3. Open the index.html file in your browser:
